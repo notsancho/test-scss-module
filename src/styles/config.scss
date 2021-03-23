@@ -1,0 +1,46 @@
+// rems to pixels
+$base-font-size: 14.4222px !default;
+$rem-baseline: $base-font-size !default;
+$rem-fallback: true !default;
+$rem-px-only: false !default;
+
+$font-family: 'Product Sans Light Regular';
+
+// globals
+$primary: #43b26d;
+$link-color: #218058;
+$linkHover: #6fd08a;
+$regularText: #000;
+$inputBorder: #a0a0a0;
+$titleText: #000;
+$invertActiveBackground: #fff;
+$unactive: #f2f2f2;
+// borders
+$primary-border: #43b26d;
+$primary-hover: #43b26d;
+$primaryInvert: #6fd08a;
+$ghost: $primary;
+
+$primary-color: #43b26d;
+$success-color: #2ac952;
+$info-color: #3bc0f9;
+$warning-color: #ffd83d;
+$danger-color: #ff3a30;
+$normal-color: #a5a5a5;
+
+// Accent colors
+$accent-color-1: #9b1dd9;
+$accent-color-2: #fdce14;
+$accent-color-3: #24a677;
+
+// Text colors
+$heading-color: #121634;
+$text-color: #666666;
+$text-color-secondary: #aaadc9;
+$text-color-light: #cfd1e1;
+
+$grey-200: #e8e8e8;
+$grey-500: #e8e8e8;
+$white: #fff;
+$blue: #00296b;
+$blueLight: #00509d;

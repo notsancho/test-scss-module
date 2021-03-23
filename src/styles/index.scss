@@ -1,0 +1,376 @@
+@import './helpers';
+
+@import './media-queries';
+
+@import './typography';
+
+@import './config';
+
+// pages
+@import 'pages/private/styles', 'pages/public/styles';
+
+// @include mq-show-breakpoints;
+
+#root {
+  padding-bottom: rem(150px);
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+
+  & > .layout {
+    float: left;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    height: 100vh;
+
+    & > div {
+      min-height: 100%;
+    }
+  }
+}
+
+html,
+body {
+  display: block;
+  font-size: rem(14px);
+  height: 100%;
+  color: #666666;
+  line-height: rem(27px);
+  font-family: 'Product Sans Regular';
+  float: left;
+  width: 100%;
+
+  &[data-management='true'] {
+    font-size: rem(12px);
+  }
+
+  @include mq($until: desktop) {
+    font-size: rem(13px);
+  }
+
+  @include mq($until: small-desktop) {
+    font-size: rem(12px);
+  }
+
+  @include mq($until: tablet) {
+    font-size: rem(11px);
+  }
+
+  @include mq($until: mobile) {
+    font-size: rem(10px);
+  }
+
+  .ebs-input {
+    font-family: 'Product Sans Regular';
+    border-radius: rem(7px);
+    font-size: rem(13px);
+  }
+
+  .container {
+    max-width: rem(960px);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  line-height: rem(46px);
+  color: #000;
+  margin-top: rem(20px);
+  margin-bottom: rem(20px);
+  @include fontBold;
+
+  font-size: rem(28px);
+}
+
+h2 {
+  font-size: rem(14px);
+
+  &.medium {
+    @include fontMedium;
+    font-size: rem(14px);
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: rem(1.5);
+}
+
+.grey {
+  color: #ccc;
+
+  &-svg path {
+    fill: #ccc !important;
+  }
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}
+
+a,
+.link {
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover {
+    color: $linkHover;
+  }
+}
+
+.link {
+  cursor: pointer;
+
+  &:hover {
+    color: $linkHover;
+  }
+}
+
+.text {
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid $inputBorder;
+  padding: rem(12.5px);
+  min-height: rem(50px);
+  outline: none;
+  border-radius: rem(4px);
+}
+
+hr {
+  border-bottom: none;
+  border-top: rem(1px) solid #e8e8e8;
+  margin: rem(10px 0);
+  float: left;
+  width: 100%;
+}
+
+hr.hr {
+  margin: rem(20px -20px 20px);
+
+  &-2 {
+    margin: rem(20px 0);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.hideTablet {
+  @include mq($until: tablet) {
+    display: none;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+
+  label {
+    cursor: pointer;
+  }
+}
+
+.primary {
+  & svg,
+  & svg path {
+    fill: $titleText !important;
+  }
+
+  & button {
+    color: $titleText !important;
+  }
+}
+
+.nowrap {
+  white-space: nowrap !important;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &-nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  &-margin-between {
+    > *:not(:first-child) {
+      margin-left: rem(15px);
+    }
+  }
+
+  &-between {
+    justify-content: space-between;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+
+  &-data {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $inputBorder;
+    border-bottom: 2px solid $primary;
+
+    &.expanded {
+      margin: rem(0);
+      border: none;
+      border-bottom: none;
+    }
+  }
+}
+
+.pt {
+  &-0 {
+    padding-top: 0;
+  }
+
+  &-5 {
+    padding-top: rem(5px);
+  }
+}
+
+.mt {
+  &--10 {
+    margin-top: rem(-10px);
+  }
+
+  &-0 {
+    margin-top: rem(0px);
+  }
+
+  &-5 {
+    margin-top: rem(5px);
+  }
+
+  &-10 {
+    margin-top: rem(10px);
+  }
+
+  &-15 {
+    margin-top: rem(15px);
+  }
+
+  &-20 {
+    margin-top: rem(20px);
+  }
+
+  &-25 {
+    margin-top: rem(25px);
+  }
+
+  &-30 {
+    margin-top: rem(30px);
+  }
+
+  &-35 {
+    margin-top: rem(35px);
+  }
+
+  &-45 {
+    margin-top: rem(45px);
+  }
+}
+
+.mb {
+  &-0 {
+    margin-bottom: rem(0px);
+  }
+
+  &-5 {
+    margin-bottom: rem(5px);
+  }
+
+  &-10 {
+    margin-bottom: rem(10px);
+  }
+
+  &-15 {
+    margin-bottom: rem(15px);
+  }
+
+  &-20 {
+    margin-bottom: rem(20px);
+  }
+
+  &-25 {
+    margin-bottom: rem(25px);
+  }
+
+  &-30 {
+    margin-bottom: rem(30px);
+  }
+
+  &-35 {
+    margin-bottom: rem(35px);
+  }
+}
+
+.text-transform {
+  &-inherit {
+    text-transform: inherit;
+  }
+
+  &-uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.mx-w {
+  &-660 {
+    max-width: rem(660px);
+  }
+
+  &-330 {
+    max-width: rem(330px);
+
+    @include mq($until: tablet) {
+      max-width: 100%;
+    }
+  }
+}
+
+.h {
+  &-25 {
+    height: rem(25px);
+  }
+}
+
+.vertical-align {
+  &-bottom {
+    vertical-align: bottom;
+  }
+}

@@ -1,40 +1,67 @@
 {
-  "name": "cra-sass",
+  "name": "start-front",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "node-sass": "^5.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "@types/react-router": "^5.1.11",
+    "@typescript-eslint/parser": "^4.15.0",
+    "axios": "^0.21.1",
+    "estafette": "^1.0.8",
+    "estafette-router": "^2.2.1",
+    "path": "^0.12.7",
+    "rc-pagination": "^3.1.3",
+    "rc-tooltip": "^4.2.1",
+    "react": "^16.13.1",
+    "react-big-calendar": "^0.31.0",
+    "react-cookies": "^0.1.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^3.2.0",
+    "react-inlinesvg": "^2.2.2",
+    "react-scripts": "^3.4.3",
+    "react-use": "^15.3.4",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@beam-australia/react-env": "^2.1.2",
+    "@storybook/addon-actions": "^6.0.16",
+    "@storybook/addon-links": "^6.0.16",
+    "@storybook/addons": "^6.0.16",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^6.0.16",
+    "@types/history": "^4.7.8",
+    "@types/qrcode.react": "^1.0.1",
+    "@types/react": "^16.9.13",
+    "@types/react-cookies": "^0.1.0",
+    "@types/react-dom": "16.9.4",
+    "@types/react-router-dom": "5.1.2",
+    "@types/socket.io-client": "^1.4.33",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "customize-cra": "^1.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-import-resolver-typescript": "^2.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.18.3",
+    "husky": "^4.2.5",
+    "less-loader": "^6.2.0",
+    "lint-staged": "^10.2.11",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "react-app-rewired": "^2.1.6",
+    "source-map-explorer": "^2.4.2",
+    "typescript": "^4.1.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all",
-      "ie 10"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "start": "npx react-app-rewired start",
+    "build": "npx react-app-rewired build",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "preanalyze": "npx react-app-rewired build",
+    "analyze": "BUNDLE_VISUALIZE=1 npx source-map-explorer 'build/static/js/*.js'",
+    "format": "npx prettier --write --config ./.prettierrc \"src/**/*.{js,jsx,ts,tsx,json,scss}\""
   }
 }
