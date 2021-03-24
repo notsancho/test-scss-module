@@ -1,9 +1,11 @@
+@import 'styles/index';
+
 .btn {
-  width: 200px;
-  height: 50px;
-  font-size: 20px;
-  border-radius: 5px;
-  margin-top: 20px;
+  width: rem(200px);
+  height: rem(50px);
+  font-size: rem(20px);
+  border-radius: rem(5px);
+  margin-top: rem(20px);
   background: rgb(199, 23, 23);
   color: white;
   border: none;
